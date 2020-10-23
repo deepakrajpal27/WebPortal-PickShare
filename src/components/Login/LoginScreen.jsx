@@ -8,7 +8,7 @@ function LoginScreen() {
     <div className='login-container'>
       <div className='middleContainer'>
         <div className='image'>
-          <img src={Image} className='bigImage'/>
+          <img src={Image} className='bigImage' />
         </div>
         <div className='lowerMiddle'>
           <div className='packetText'>
@@ -21,7 +21,7 @@ function LoginScreen() {
         </div>
       </div>
       <div className='pickShareLogo'>
-        <img className='logoDimensions' src={Logo}/>
+        <img className='logoDimensions' src={Logo} />
       </div>
     </div>
   );
