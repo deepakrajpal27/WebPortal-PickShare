@@ -1,0 +1,95 @@
+.login-container {
+    height: 100vh;
+    display: flex;
+}
+
+.middleContainer {
+    height: 470px;
+    margin: 100px auto 0px;
+    width: calc(100vw - 500px);
+}
+
+@media screen and (max-width: 900px) {
+    .middleContainer {
+        width: calc(100vw - 200px);
+    }
+}
+
+
+/* .image {
+    height: 250px;
+} */
+
+.bigImage {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .bigImage {
+        width: 100%;
+        height: 40%;
+    }
+}
+
+.lowerMiddle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.packetText {
+    font-family: 'Open Sans', serif;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.einloggenButton {
+    background-color: #93C21C;
+    border: none;
+    font-family: 'Open Sans';
+    width: 300px;
+    height: 50px;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.registrierenButton {
+    background-color: #ffffff;
+    font-family: 'Open Sans';
+    width: 300px;
+    height: 50px;
+    border-radius: 2px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.pickShareLogo {
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+}
+
+.logoDimensions {
+    height: 86px;
+    width: 317px;
+}
+
+@media screen and (max-width: 900px) {
+    .logoDimensions {
+        height: 60px;
+        width: 190px;
+    }
+}

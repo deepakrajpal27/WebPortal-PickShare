@@ -1,0 +1,30 @@
+import React from 'react';
+import './LoginScreen.css';
+import Image from './image.jpg';
+import Logo from './pickshare_Logo.png';
+
+function LoginScreen() {
+  return (
+    <div className='login-container'>
+      <div className='middleContainer'>
+        <div className='image'>
+          <img src={Image} className='bigImage'/>
+        </div>
+        <div className='lowerMiddle'>
+          <div className='packetText'>
+            <h2>Pakete sicher annehmen und lokal versenden</h2>
+          </div>
+          <div className='buttonContainer'>
+            <button className='einloggenButton'>Einloggen</button>
+            <button className='registrierenButton'>Registrieren</button>
+          </div>
+        </div>
+      </div>
+      <div className='pickShareLogo'>
+        <img className='logoDimensions' src={Logo}/>
+      </div>
+    </div>
+  );
+}
+
+export default LoginScreen;
