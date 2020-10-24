@@ -1,13 +1,37 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Image from './image.jpg';
+import Logo from './pickshare_Logo.png';
 
-class LoginForm extends Component {
-    render() {
-        return (
-            <div>
-                hello
+function LoginForm() {
+    return (
+        // <div>
+        //     hello
+        // </div>
+        <div className='login-container'>
+            <div className='middleContainer'>
+                <div className='image'>
+                    <img src={Image} className='bigImage' />
+                </div>
+                <div className='lowerMiddle'>
+                    <div className='packetText'>
+                        <h2>Login</h2>
+                    </div>
+                    <div className='buttonContainer'>
+                        <Link to='/login'>
+                            <button className='einloggenButton'>Einloggen</button>
+                        </Link>
+                        <Link to='/'>
+                            <button className='registrierenButton'>Registrieren</button>
+                        </Link>
+                    </div>
+                </div>
             </div>
-        );
-    }
+            <div className='pickShareLogo'>
+                <img className='logoDimensions' src={Logo} />
+            </div>
+        </div>
+    );
 }
 
 export default LoginForm;
