@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Image from './image.jpg';
 import Logo from './pickshare_Logo.png';
 
 function LoginForm() {
     return (
-        // <div>
-        //     hello
-        // </div>
         <div className='login-container'>
             <div className='middleContainer'>
                 <div className='image'>

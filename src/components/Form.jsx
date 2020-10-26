@@ -34,7 +34,7 @@ export class PostForm extends Component {
     }
 
     handleEmailChange = e => {
-        this.setState({email: e.target.value})
+        this.setState({ email: e.target.value })
 
         const email = this.state.email;
         const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -42,10 +42,10 @@ export class PostForm extends Component {
     }
 
     handlePasswordChange = e => {
-        this.setState({password: e.target.value})
+        this.setState({ password: e.target.value })
         let passwordLength = e.target.value.length;
-        
-        if(passwordLength <= 6){
+
+        if (passwordLength <= 6) {
             invalidPassword = false;
         } else {
             invalidPassword = true;
@@ -73,13 +73,13 @@ export class PostForm extends Component {
                         <input type='text' placeholder='Email' value={email} name='email' onChange={this.handleEmailChange} />
                     </div>
                     <div>
-                    {!invalidEmail ? 'Invalid Email' : ''}
+                        {!invalidEmail ? 'Invalid Email' : ''}
                     </div>
                     <div>
                         <input type='password' placeholder='Password' value={password} name='password' onChange={this.handlePasswordChange} />
                     </div>
                     <div>
-                    {!invalidPassword ? 'Password must be of at least 6 characters.' : ''}
+                        {!invalidPassword ? 'Password must be of at least 6 characters.' : ''}
                     </div>
                     <div>
                         <input type='text' placeholder='Street' value={street} name='street' onChange={this.handleChange} />

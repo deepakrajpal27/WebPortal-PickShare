@@ -23,10 +23,10 @@ class LoginScreen extends Component {
             </div>
             <div className='buttonContainer'>
               {/* <Link to='/login'> */}
-              <button onClick={() => { this.routeChange("/login") }} className='einloggenButton'>Einloggen</button>
+              {/* <button onClick={() => { this.routeChange("/login") }} className='einloggenButton'>Einloggen</button> */}
               {/* </Link> */}
-
-              <button onClick={() => { this.routeChange("/") }} className='registrierenButton'>Registrieren</button>
+              <button className='einloggenButton'>Einloggen</button>
+              <button onClick={() => { this.routeChange("/registration") }} className='registrierenButton'>Registrieren</button>
             </div>
           </div>
         </div>

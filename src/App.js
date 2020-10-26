@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Form from './components/Form'
 import './App.css';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import LoginForm from "./components/Login/LoginForm"
 import LoginScreen from './components/Login/LoginScreen';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import RegistrationForm from './components/Registration/RegistrationForm.jsx';
 
 class App extends Component {
     render() {
@@ -15,7 +16,8 @@ class App extends Component {
                             render={props => {
                                 return <LoginScreen {...props} />
                             }} />
-                        <Route path='/login' exact component={LoginForm} />
+                        <Route path='/login' component={LoginForm} />
+                        <Route path='/registration' component={RegistrationForm} />
                     </Switch >
                 </Router>
             </div>
