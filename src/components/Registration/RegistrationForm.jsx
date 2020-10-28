@@ -1,21 +1,32 @@
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Checkbox, Radio, TextField, withStyles } from '@material-ui/core';
-import React from 'react';
+import React, { useState } from 'react';
 import { useStyles } from './RegistrationForm.js'
 
 const RegistrationForm = (props) => {
+
+    const [selectedValue, setSelectedValue] = useState('create-business-account');
+    const [checked, setChecked] = useState(false);
 
     const classes = useStyles();
 
     const routeChange = (path) => {
         props.history.push(path)
-    }
+    };
+
+    const handleChangeRadioButtons = (event) => {
+        setSelectedValue(event.target.value);
+    };
+
+    const handleChange = (event) => {
+        setChecked(event.target.checked);
+    };
 
     return (
         <div className={classes.root}>
             <div className={classes.leftContainer}>
-                <FontAwesomeIcon onClick={() => { routeChange('/login') }} icon={faArrowLeft} className={classes.backIcon} />
+                <FontAwesomeIcon onClick={() => { routeChange('/') }} icon={faArrowLeft} className={classes.backIcon} />
             </div>
             <div className={classes.middleContainer}>
                 <p className={classes.pageHeading}>Schön dich kennenzulernen</p>
@@ -111,16 +122,26 @@ const RegistrationForm = (props) => {
 
                 <div>
                     <div className={classes.checkboxText}>
-                        <GreenCheckbox name="checkedC" />
+                        <GreenCheckbox
+                            checked={checked}
+                            onChange={handleChange} />
                         <p>Ich akzeptiere die allgemeinen Geschäftsbedingungen</p>
                     </div>
                     <div className={classes.checkboxText}>
-                        <GreenRadio name="radio-button-demo" />
+                        <GreenRadio
+                            name="create-business-account"
+                            value="create-business-account"
+                            checked={selectedValue === 'create-business-account'}
+                            onChange={handleChangeRadioButtons} />
                         <p>Business-Account anlegen</p>
                     </div>
 
                     <div className={classes.checkboxText}>
-                        <GreenRadio name="radio-button-demo" />
+                        <GreenRadio
+                            name="zu-business-account"
+                            value="zu-business-account"
+                            checked={selectedValue === 'zu-business-account'}
+                            onChange={handleChangeRadioButtons} />
                         <p>zu Business-Account hinzufügen</p>
                     </div>
                     <button className={classes.registrierenButton}>Registrieren</button>
