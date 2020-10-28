@@ -5,6 +5,7 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import LoginForm from "./components/Login/LoginForm"
 import LoginScreen from './components/Login/LoginScreen';
 import RegistrationForm from './components/Registration/RegistrationForm.jsx';
+import RegistrationSteps from './components/Registration/RegistrationSteps.jsx';
 
 class App extends Component {
     render() {
@@ -18,6 +19,7 @@ class App extends Component {
                             }} />
                         <Route path='/login' component={LoginForm} />
                         <Route path='/registration' component={RegistrationForm} />
+                        <Route path='/registration-steps' component={RegistrationSteps} />
                     </Switch >
                 </Router>
             </div>

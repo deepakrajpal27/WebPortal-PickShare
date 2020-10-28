@@ -83,6 +83,43 @@ const useStyles = makeStyles({
     backIcon: {
         marginTop: '32px',
         cursor: 'pointer'
+    },
+    radioButtonsContainer: {
+        width: '450px',
+        height: '60px',
+        boxShadow: '0px 1px 5px -3px black',
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center'
+    },
+    radioButton: {
+        display: 'flex',
+    },
+    radioButtonLabel: {
+        fontFamily: 'Open Sans',
+        fontWeight: 600,
+    },
+    weiterButton: {
+        backgroundColor: '#93C21C',
+        fontFamily: 'Open Sans',
+        width: '25%',
+        height: '40px',
+        borderRadius: '2px',
+        border: 'none',
+        marginTop: '20px',
+        fontSize: '20px',
+        fontWeight: 600,
+        cursor: 'pointer',
+        letterSpacing: '1px',
+        boxShadow: '0px 0px 2px 0px black',
+        position: 'absolute',
+        bottom: '55px',
+    },
+    configurationContainer: {
+        boxShadow: '0px 1px 5px -3px black',
+        width: '70%',
+        height: '440px',
+        marginTop: '10px'
     }
 });
 

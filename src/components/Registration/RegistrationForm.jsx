@@ -10,8 +10,6 @@ const RegistrationForm = (props) => {
     const [selectedValue, setSelectedValue] = useState('create-business-account');
     const [checked, setChecked] = useState(false);
 
-    const classes = useStyles();
-
     const routeChange = (path) => {
         props.history.push(path)
     };
@@ -23,6 +21,8 @@ const RegistrationForm = (props) => {
     const handleChange = (event) => {
         setChecked(event.target.checked);
     };
+
+    const classes = useStyles();
 
     return (
         <div className={classes.root}>
@@ -133,22 +133,22 @@ const RegistrationForm = (props) => {
                     </div>
                     <div className={classes.checkboxText}>
                         <GreenRadio
-                            name="create-business-account"
                             value="create-business-account"
                             checked={selectedValue === 'create-business-account'}
-                            onChange={handleChangeRadioButtons} />
+                            onChange={handleChangeRadioButtons}
+                            style={{ background: 'transparent' }} />
                         <p>Business-Account anlegen</p>
                     </div>
 
                     <div className={classes.checkboxText}>
                         <GreenRadio
-                            name="zu-business-account"
                             value="zu-business-account"
                             checked={selectedValue === 'zu-business-account'}
-                            onChange={handleChangeRadioButtons} />
+                            onChange={handleChangeRadioButtons}
+                            style={{ background: 'transparent' }} />
                         <p>zu Business-Account hinzufügen</p>
                     </div>
-                    <button className={classes.registrierenButton}>Registrieren</button>
+                    <button onClick={() => { routeChange('/registration-steps') }} className={classes.registrierenButton}>Registrieren</button>
                 </div>
             </div>
             <div className={classes.rightContainer} />
@@ -156,7 +156,7 @@ const RegistrationForm = (props) => {
     );
 };
 
-const GreenCheckbox = withStyles({
+export const GreenCheckbox = withStyles({
     root: {
         // color: green[400],
         '&$checked': {
@@ -166,7 +166,7 @@ const GreenCheckbox = withStyles({
     checked: {},
 })((props) => <Checkbox color="default" {...props} />);
 
-const GreenRadio = withStyles({
+export const GreenRadio = withStyles({
     root: {
         '&$checked': {
             color: '#93C21C',
