@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { Checkbox, Radio, TextField, withStyles } from '@material-ui/core';
+import { Checkbox, Radio, Switch, TextField, withStyles } from '@material-ui/core';
 import Logo from './../Login/pickshare_Logo.png';
 import React, { useState } from 'react';
 import { useStyles } from './RegistrationForm.js'
@@ -29,7 +29,7 @@ const RegistrationForm = (props) => {
             <div className={classes.leftContainer}>
                 <FontAwesomeIcon onClick={() => { routeChange('/') }} icon={faArrowLeft} className={classes.backIcon} />
                 <div className={classes.logoContainer}>
-                    <img className={classes.logoDimensions} src={Logo} />
+                    <img alt={'temp'} className={classes.logoDimensions} src={Logo} />
                 </div>
             </div>
             <div className={classes.middleContainer}>
@@ -158,7 +158,6 @@ const RegistrationForm = (props) => {
 
 export const GreenCheckbox = withStyles({
     root: {
-        // color: green[400],
         '&$checked': {
             color: '#93C21C',
         },
@@ -174,5 +173,24 @@ export const GreenRadio = withStyles({
     },
     checked: {},
 })((props) => <Radio color="default" {...props} />);
+
+export const GreenSwitch = withStyles({
+    switchBase: {
+        '&$checked': {
+            color: '#fff',
+        },
+        '&$checked + $track': {
+            color: '#93C21C',
+            backgroundColor: '#93C21C',
+        },
+    },
+    thumb: {
+        width: '20px',
+        height: '20px',
+        boxShadow: '0px 0px 15px 1px rgba(0,0,0,0.2)',
+    },
+    checked: {},
+    track: {},
+})(Switch);
 
 export default RegistrationForm;

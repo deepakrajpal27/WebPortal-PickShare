@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from './components/Form'
+// import Form from './components/Form'
 import './App.css';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import LoginForm from "./components/Login/LoginForm"

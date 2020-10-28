@@ -8,7 +8,7 @@ function LoginForm() {
         <div className='login-container'>
             <div className='middleContainer'>
                 <div className='image'>
-                    <img src={Image} className='bigImage' />
+                    <img alt={'temp'} src={Image} className='bigImage' />
                 </div>
                 <div className='lowerMiddle'>
                     <div className='packetText'>
@@ -25,7 +25,7 @@ function LoginForm() {
                 </div>
             </div>
             <div className='pickShareLogo'>
-                <img className='logoDimensions' src={Logo} />
+                <img alt={'temp'} className='logoDimensions' src={Logo} />
             </div>
         </div>
     );

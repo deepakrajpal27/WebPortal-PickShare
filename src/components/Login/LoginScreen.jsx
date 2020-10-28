@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './LoginScreen.css';
 import Image from './image.jpg';
 import Logo from './pickshare_Logo.png';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class LoginScreen extends Component {
 
@@ -15,7 +15,7 @@ class LoginScreen extends Component {
       <div className='login-container'>
         <div className='middleContainer'>
           <div className='image'>
-            <img src={Image} className='bigImage' />
+            <img alt={'temp'} src={Image} className='bigImage' />
           </div>
           <div className='lowerMiddle'>
             <div className='packetText'>
@@ -31,7 +31,7 @@ class LoginScreen extends Component {
           </div>
         </div>
         <div className='pickShareLogo'>
-          <img className='logoDimensions' src={Logo} />
+          <im alt={'temp'} className='logoDimensions' src={Logo} />
         </div>
       </div>
     );

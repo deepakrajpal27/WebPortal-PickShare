@@ -119,7 +119,25 @@ const useStyles = makeStyles({
         boxShadow: '0px 1px 5px -3px black',
         width: '70%',
         height: '440px',
-        marginTop: '10px'
+        marginTop: '30px'
+    },
+    serviceKonfigurieren: {
+        fontFamily: 'Open Sans',
+        display: 'flex',
+        fontWeight: 600,
+        marginLeft: '20px',
+        fontSize: 20,
+    },
+    switchLabel: {
+        fontFamily: 'Open Sans',
+        fontWeight: 600,
+        margin: '5px 0px 5px 0px',
+    },
+    switchContainer: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '0px 50px 0px 30px',
     }
 });
 

@@ -4,10 +4,12 @@ import Logo from './../Login/pickshare_Logo.png';
 import React, { useState } from 'react';
 import { useStyles } from './RegistrationForm.js'
 import { GreenRadio } from './RegistrationForm.jsx';
+import { GreenSwitch } from './RegistrationForm.jsx';
 
 const RegistrationSteps = (props) => {
 
     const [userType, setUserType] = useState('shop');
+    const [configurationSwitch, setConfigurationSwitch] = useState(false);
 
     const routeChange = (path) => {
         props.history.push(path)
@@ -16,13 +18,18 @@ const RegistrationSteps = (props) => {
     const handleChangeRadioButtons = (event) => {
         setUserType(event.target.value);
     };
+
+    const handleSwitch = (event) => {
+        setConfigurationSwitch(event.target.checked);
+    };
+
     const classes = useStyles();
     return (
         <div className={classes.root}>
             <div className={classes.leftContainer}>
                 <FontAwesomeIcon onClick={() => { routeChange('/registration') }} icon={faArrowLeft} className={classes.backIcon} />
                 <div className={classes.logoContainer}>
-                    <img className={classes.logoDimensions} src={Logo} />
+                    <img alt={'temp'} className={classes.logoDimensions} src={Logo} />
                 </div>
             </div>
             <div className={classes.middleContainer} >
@@ -46,7 +53,15 @@ const RegistrationSteps = (props) => {
                     </div>
                 </div>
                 <div className={classes.configurationContainer}>
-
+                    <p className={classes.serviceKonfigurieren}>Service Konfigurieren</p>
+                    <div className={classes.switchContainer}>
+                        <p className={classes.switchLabel} >Abholung (Paketservice)</p>
+                        <GreenSwitch
+                            checked={configurationSwitch}
+                            onChange={handleSwitch}
+                            name="configurationSwitch"
+                        />
+                    </div>
                 </div>
                 <button className={classes.weiterButton}>Weiter</button>
             </div>
