@@ -16,6 +16,15 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'flex-end',
     },
+    logoContainer: {
+        position: 'absolute',
+        bottom: '5px',
+        left: '15px',
+    },
+    logoDimensions: {
+        height: '40px',
+        width: '150px',
+    },
     middleContainer: {
         width: '50%',
         display: 'flex',

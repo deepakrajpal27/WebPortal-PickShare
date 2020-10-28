@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Checkbox, Radio, TextField, withStyles } from '@material-ui/core';
+import Logo from './../Login/pickshare_Logo.png';
 import React, { useState } from 'react';
 import { useStyles } from './RegistrationForm.js'
 
@@ -27,6 +28,9 @@ const RegistrationForm = (props) => {
         <div className={classes.root}>
             <div className={classes.leftContainer}>
                 <FontAwesomeIcon onClick={() => { routeChange('/') }} icon={faArrowLeft} className={classes.backIcon} />
+                <div className={classes.logoContainer}>
+                    <img className={classes.logoDimensions} src={Logo} />
+                </div>
             </div>
             <div className={classes.middleContainer}>
                 <p className={classes.pageHeading}>Schön dich kennenzulernen</p>

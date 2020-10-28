@@ -79,14 +79,13 @@
 }
 
 .pickShareLogo {
+    left: 15px;
+    bottom: 5px;
     position: absolute;
-    bottom: 15px;
-    left: 25px;
 }
-
 .logoDimensions {
-    height: 86px;
-    width: 317px;
+    height: 40px;
+    width: 150px;
 }
 
 @media screen and (max-width: 900px) {
